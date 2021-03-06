@@ -11,7 +11,7 @@
 
 <h3>Inspiration</h3>
 -관심 프로젝트<br />
-[a relative link](COMPUTER_VISION_INFOS/main/ref_projects/README.md)<br />
+[a relative link](./ref_projects/README.md)<br />
 -관심 라이브러리<br />
 [a relative link](COMPUTER_VISION_INFOS/main/ref_libs/README.md)<br />
 -프로젝트 아이디어<br />
