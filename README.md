@@ -11,19 +11,17 @@
 
 <h4>Inspiration</h4>
 -관심 프로젝트<br />
-[a relative link](ref_projects/README.md)<br />
+[a relative link](COMPUTER_VISION_INFOS/main/ref_projects/README.md)<br />
 -관심 라이브러리<br />
-[a relative link](ref_libs/README.md)<br />
+[a relative link](COMPUTER_VISION_INFOS/main/ref_libs/README.md)<br />
 -프로젝트 아이디어<br />
-[a relative link](ref_projects/README.md)<br />
+[a relative link](COMPUTER_VISION_INFOS/main/ref_projects/README.md)<br />
 
 <hr />
 
 <h4>참여자</h4>
--ahnsun98<br />
-[a link](https://github.com/ahnsun98)<br />
--soohi0<br />
-[a link](https://github.com/soohi0)<br />
+-<a src = "https://github.com/ahnsun98">ahnsun98</a><br />
+-<a src = "https://github.com/soohi0">soohi0</a><br />
 <hr />
 
 <h4>일지</h4>
