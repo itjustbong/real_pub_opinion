@@ -15,7 +15,7 @@
 -관심 라이브러리<br />
 [ref_libs](./ref_libs/README.md)<br />
 -프로젝트 아이디어<br />
-[COMPUTER_VISION_INFOS](./ref_projects/README.md)<br />
+[ref_projects](./ref_projects/README.md)<br />
 
 <hr />
 
