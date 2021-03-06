@@ -20,10 +20,10 @@
 <hr />
 
 <h4>참여자</h4>
--ahnsun98
-[a link](https://github.com/ahnsun98)
--soohi0
-[a link](https://github.com/soohi0)
+-ahnsun98<br />
+[a link](https://github.com/ahnsun98)<br />
+-soohi0<br />
+[a link](https://github.com/soohi0)<br />
 <hr />
 
 <h4>일지</h4>
