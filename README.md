@@ -11,16 +11,21 @@
 
 <h3>Inspiration</h3>
 -관심 프로젝트<br />
+
 [ref_projects](./ref_projects/README.md)<br />
+
 -관심 라이브러리<br />
 [ref_libs](./ref_libs/README.md)<br />
+
 -프로젝트 아이디어<br />
 [ref_projects](./ref_projects/README.md)<br />
 
 <hr />
 
 <h3>참여자</h3>
+
 -[ahnsun98](https://github.com/ahnsun98)<br />
+
 -[soohi0](https://github.com/soohi0)<br />
 <hr />
 
