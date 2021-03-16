@@ -19,5 +19,6 @@
   
 -[qhdgkdbs](https://github.com/qhdgkdbs/r)<br />
   뉴스 데이터 수집
+  :: 키워드 > 연관 키워드 추출 > 메인 키워드 / 연관 키워드 별 뉴스 api 검색 > csv저장
 <hr />
 
