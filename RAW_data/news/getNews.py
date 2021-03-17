@@ -8,6 +8,7 @@ import getSuggesion
 with open('config.json', 'r') as f:
     config = json.load(f)
 
+# config파일이 필요하면 연락 ㄱ 
 NAVER_ID = config['NAVER']['ID'] # 'secret-key-of-myapp'
 NAVER_SECRET = config['NAVER']['Secret'] # 'web-hooking-url-from-ci-service'
 
@@ -15,7 +16,12 @@ NAVER_SECRET = config['NAVER']['Secret'] # 'web-hooking-url-from-ci-service'
 encode_type = 'json'
 data_num = 1000
 keyword = ['문재인', '이재명', '윤석열', '이낙연', '홍준표']
-# keyword = ['삼성', '엘지', 'LG', '테슬라', '애플']
+
+############################################################
+#########여기에 1차 키워드의 연관 검색어를 추가하는 함수가 들어가야해######
+############################################################
+
+
 
 headers = {
     'X-Naver-Client-Id' : NAVER_ID,
