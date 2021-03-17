@@ -22,7 +22,6 @@ keyword = ['문재인', '이재명', '윤석열', '이낙연', '홍준표']
 ############################################################
 
 
-
 headers = {
     'X-Naver-Client-Id' : NAVER_ID,
     'X-Naver-Client-Secret' : NAVER_SECRET
