@@ -3,6 +3,7 @@ import pandas as pd
 from pprint import pprint
 import json
 import os
+import getSuggesion
 
 with open('config.json', 'r') as f:
     config = json.load(f)
