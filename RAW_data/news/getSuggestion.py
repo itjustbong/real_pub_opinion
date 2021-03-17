@@ -19,6 +19,6 @@ def getSugList(keyword):
 
 
 
-print(getSugList("이재명"))
+# print(getSugList("이재명"))
 
 
