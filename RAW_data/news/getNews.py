@@ -3,7 +3,7 @@ import pandas as pd
 from pprint import pprint
 import json
 import os
-import getSuggesion
+import getSuggestion
 
 with open('config.json', 'r') as f:
     config = json.load(f)
@@ -12,20 +12,20 @@ with open('config.json', 'r') as f:
 NAVER_ID = config['NAVER']['ID'] # 'secret-key-of-myapp'
 NAVER_SECRET = config['NAVER']['Secret'] # 'web-hooking-url-from-ci-service'
 
-
-encode_type = 'json'
-data_num = 1000
-keyword = ['문재인', '이재명', '윤석열', '이낙연', '홍준표']
-
-############################################################
-#########여기에 1차 키워드의 연관 검색어를 추가하는 함수가 들어가야해######
-############################################################
-
-
 headers = {
     'X-Naver-Client-Id' : NAVER_ID,
     'X-Naver-Client-Secret' : NAVER_SECRET
 }
+
+encode_type = 'json'
+data_num = 1000
+RAW_keyword = ['문재인', '이재명', '윤석열', '이낙연', '홍준표']
+keyword = []
+
+for i in RAW_keyword:
+    data_arr = getSuggestion.getSugList(i)
+    for k in data_arr:
+        keyword.append(k)
 
 for key in keyword:
     # print(key)
