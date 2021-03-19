@@ -18,7 +18,6 @@ def getSugList(keyword):
     return sug_word_list
 
 
-
 # print(getSugList("이재명"))
 
 
