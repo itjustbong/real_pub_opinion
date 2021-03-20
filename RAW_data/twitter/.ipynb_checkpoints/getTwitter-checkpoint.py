@@ -2,16 +2,15 @@ import twitter
 import pandas as pd
 import os
 import getSuggestion
+import json
 
-twitter_consumer_key = ""
-twitter_consumer_secret = ""  
-twitter_access_token = ""
-twitter_access_secret = ""
+with open('config.json', 'r') as f:
+    config = json.load(f)
 
-twitter_api = twitter.Api(consumer_key=twitter_consumer_key,
-                          consumer_secret=twitter_consumer_secret, 
-                          access_token_key=twitter_access_token, 
-                          access_token_secret=twitter_access_secret)
+twitter_consumer_key = twitter_access_secret[twitter_consumer_key]
+twitter_consumer_secret = twitter_access_secret[twitter_consumer_secret]
+twitter_access_token = twitter_access_secret[twitter_access_token]
+twitter_access_secret = twitter_access_secret[twitter_access_secret]
 
 
 query = ["문재인", "이재명", "이낙연", "윤석열", "홍준표"]
