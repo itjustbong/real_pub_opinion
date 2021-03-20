@@ -3,6 +3,7 @@ import xml.etree.ElementTree as ET
 
 
 def getSugList(keyword):
+    print(keyword)
     url = "http://suggestqueries.google.com/complete/search?output=toolbar&q=" + keyword
     req = requests.get(url)
 
