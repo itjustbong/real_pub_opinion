@@ -2,11 +2,15 @@ import twitter
 import pandas as pd
 import os
 import getSuggestion
+import json
 
-twitter_consumer_key = ""
-twitter_consumer_secret = ""  
-twitter_access_token = ""
-twitter_access_secret = ""
+with open('config.json', 'r') as f:
+    config = json.load(f)
+
+twitter_consumer_key = twitter_access_secret[twitter_consumer_key]
+twitter_consumer_secret = twitter_access_secret[twitter_consumer_secret]
+twitter_access_token = twitter_access_secret[twitter_access_token]
+twitter_access_secret = twitter_access_secret[twitter_access_secret]
 
 twitter_api = twitter.Api(consumer_key=twitter_consumer_key,
                           consumer_secret=twitter_consumer_secret, 
@@ -16,45 +20,26 @@ twitter_api = twitter.Api(consumer_key=twitter_consumer_key,
 
 query = ["문재인", "이재명", "이낙연", "윤석열", "홍준표"]
 ##추가 for get 연관검색어
-suggestion = []
+data_arr = []
 
 for i in query:
-    data_arr = getSuggestion.getSugList(i)
-    for k in data_arr:
-        suggestion.append(k)
-        print(k)
+    sug_arr = getSuggestion.getSugList(i)
+    for k in sug_arr:
+        data_arr.append(k)
 ##
 
-query.extend(suggestion)
-
-for name in query:
+for name in data_arr:
     cnt = 0
     text = []
-    created_at = []
-    comp = []
-    isSame = False
     
-    statuses = twitter_api.GetSearch(term=name, count=100)
+    statuses = twitter_api.GetSearch(term=name, count=100, since="2021-03-01")
     for status in statuses:
-        for c in comp:
-            if c == status.text[:20]:
-                isSame = True
-                break
-        if isSame:
-            continue
         text.append(status.text.strip())
-        created_at.append(status.created_at)
-        comp.append(status.text[:20])
         cnt += 1
     print('%s 총 검색 수 : %d'%(name,cnt))
-    
-    if len(text)==0 :
-        continue
-    
-    df1 = pd.DataFrame(text)
-    df2 = pd.DataFrame(created_at)
-    df = pd.concat([df1,df2], axis=1)
-    df.columns = ["text","created_at"]
+
+    df = pd.DataFrame(text)
+    df.columns = ["text"]
     
     if not os.path.exists("./data"):
         os.makedirs("./data")
