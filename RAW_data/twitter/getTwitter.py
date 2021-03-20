@@ -7,13 +7,17 @@ import json
 with open('config.json', 'r') as f:
     config = json.load(f)
 
-twitter_consumer_key = twitter_access_secret[twitter_consumer_key]
-twitter_consumer_secret = twitter_access_secret[twitter_consumer_secret]
-twitter_access_token = twitter_access_secret[twitter_access_token]
-twitter_access_secret = twitter_access_secret[twitter_access_secret]
+twitter_consumer_key = config["twitter_consumer_key"]
+twitter_consumer_secret = config["twitter_consumer_secret"]
+twitter_access_token = config["twitter_access_token"]
+twitter_access_secret = config["twitter_access_secret"]
 
+twitter_api = twitter.Api(consumer_key=twitter_consumer_key,
+                          consumer_secret=twitter_consumer_secret, 
+                          access_token_key=twitter_access_token, 
+                          access_token_secret=twitter_access_secret)
 
-query = ["문재인", "이재명", "이낙연", "윤석열", "홍준표"]
+query = ["Biden", "Trump"]
 ##추가 for get 연관검색어
 suggestion = []
 
