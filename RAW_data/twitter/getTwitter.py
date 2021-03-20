@@ -22,13 +22,12 @@ query = ["문재인", "이재명", "이낙연", "윤석열", "홍준표"]
 data_arr = []
 
 for i in query:
-    data_arr = getSuggestion.getSugList(i)
-    for k in data_arr:
-        print("get", k)
-        query.append(k)
+    sug_arr = getSuggestion.getSugList(i)
+    for k in sug_arr:
+        data_arr.append(k)
 ##
 
-for name in query:
+for name in data_arr:
     cnt = 0
     text = []
     
