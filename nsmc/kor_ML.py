@@ -1,4 +1,7 @@
 from konlpy.tag import Okt
+import json
+import os
+from pprint import pprint
 
 okt = Okt()
 
@@ -17,9 +20,7 @@ print(len(train_data[0]))
 print(len(test_data))
 print(len(test_data[0]))
 
-import json
-import os
-from pprint import pprint
+
 
 def tokenize(doc):
     # norm은 정규화, stem은 근어로 표시하기를 나타냄
