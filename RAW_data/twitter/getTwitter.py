@@ -3,10 +3,13 @@ import pandas as pd
 import os
 import getSuggestion
 
-twitter_consumer_key = "jtD4aCwkROzMvgQYvoSvHb8Gt"
-twitter_consumer_secret = "XUFfyK72oSZMn8yq0a6l7nNc9tp8tiMYbUX5nA7NtcBr0Yst9j"  
-twitter_access_token = "1372615626619899904-kmRuTEnEqzKXsGeNzzMeciuMmeZ5lR"
-twitter_access_secret = "odK3OM0pk9z7DYtf2HbG0BdAaF8M8vuKJrJIhFkcDjqsT"
+with open('config.json', 'r') as f:
+    config = json.load(f)
+
+twitter_consumer_key = twitter_access_secret[twitter_consumer_key]
+twitter_consumer_secret = twitter_access_secret[twitter_consumer_secret]
+twitter_access_token = twitter_access_secret[twitter_access_token]
+twitter_access_secret = twitter_access_secret[twitter_access_secret]
 
 twitter_api = twitter.Api(consumer_key=twitter_consumer_key,
                           consumer_secret=twitter_consumer_secret, 
